@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/edittext_background"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_account">
+
+        <Button
+            android:id="@+id/button_signup3"
+            android:layout_width="337dp"
+            android:layout_height="55dp"
+            android:background="@drawable/signup_btn"
+            android:fontFamily="@font/comfortaabold"
+            android:gravity="center"
+            android:text="Sign up with Google"
+            tools:layout_editor_absoluteX="37dp"
+            tools:layout_editor_absoluteY="616dp" />
+
+        <TextView
+            android:layout_width="194dp"
+            android:layout_height="69dp"
+            android:fontFamily="@font/comfortaasemibold"
+            android:gravity="center"
+            android:text="Welcome"
+            android:textColor="@color/white"
+            android:textSize="34sp"
+            tools:layout_editor_absoluteX="108dp"
+            tools:layout_editor_absoluteY="372dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/comfortaasemibold"
+            android:text="Need an account? Sign up here!"
+            android:textColor="@color/material_dynamic_primary40"
+            tools:layout_editor_absoluteX="87dp"
+            tools:layout_editor_absoluteY="582dp" />
+
+        <Button
+            android:id="@+id/button_signin"
+            android:layout_width="337dp"
+            android:layout_height="55dp"
+            android:background="@drawable/signup_btn"
+            android:fontFamily="@font/comfortaabold"
+            android:gravity="center"
+            android:text="Sign in with Google"
+            tools:layout_editor_absoluteX="37dp"
+            tools:layout_editor_absoluteY="484dp" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/signup"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="-139dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+</RelativeLayout>

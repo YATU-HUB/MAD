@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_account"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="278dp"
+        android:layout_height="100dp"
+        android:fontFamily="@font/comfortaabold"
+        android:text="Habit Hub"
+        android:textAlignment="center"
+        android:textColor="@color/material_dynamic_neutral_variant90"
+        android:textSize="40sp"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="424dp" />
+
+    <TextView
+        android:id="@+id/app_slogan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/comfortaameduim"
+        android:text="Small Steps, Big Changes"
+        android:textColor="@color/material_dynamic_primary40"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="515dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="227dp"
+        android:layout_height="48dp"
+        android:background="@drawable/signup_btn"
+        android:fontFamily="@font/comfortaabold"
+        android:gravity="center"
+        android:text="Let's Start "
+        tools:layout_editor_absoluteX="92dp"
+        tools:layout_editor_absoluteY="573dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="387dp"
+        android:layout_height="541dp"
+        app:srcCompat="@drawable/welcome"
+        tools:layout_editor_absoluteX="12dp"
+        tools:layout_editor_absoluteY="-26dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
