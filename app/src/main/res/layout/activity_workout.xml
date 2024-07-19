@@ -50,12 +50,12 @@
                 android:layout_height="323dp">
 
                 <ImageView
-                    android:layout_width="136dp"
-                    android:layout_height="134dp"
+                    android:layout_width="144dp"
+                    android:layout_height="125dp"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="60dp"
-                    android:src="@drawable/work_out_icon" />
+                    android:layout_marginTop="65dp"
+                    android:src="@drawable/img_1" />
 
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
@@ -74,10 +74,10 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:layout_width="139dp"
-                    android:layout_height="128dp"
+                    android:layout_width="134dp"
+                    android:layout_height="122dp"
                     android:layout_centerInParent="true"
-                    android:src="@drawable/reading_icon" />
+                    android:src="@drawable/img" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -95,10 +95,10 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="145dp"
+                    android:layout_height="122dp"
                     android:layout_centerInParent="true"
-                    android:src="@drawable/drink_water_icon" />
+                    android:src="@drawable/img_4" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
@@ -116,10 +116,10 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="141dp"
+                    android:layout_height="130dp"
                     android:layout_centerInParent="true"
-                    android:src="@drawable/sleeping_icon" />
+                    android:src="@drawable/img_3" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
     </GridLayout>
