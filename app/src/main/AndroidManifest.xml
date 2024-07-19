@@ -15,11 +15,26 @@
         android:theme="@style/Theme.HabitHub"
         tools:targetApi="31">
         <activity
+            android:name=".SleepingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ReadingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DrinkwaterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WorkoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddhabitActivity"
+            android:exported="false" />
+        <activity
             android:name=".homepage"
             android:exported="false" />
         <activity
             android:name=".activity_login"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">

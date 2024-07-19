@@ -62,3 +62,4 @@ public class AddHabitFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_add_habit, container, false);
     }
 }
+
