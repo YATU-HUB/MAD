@@ -43,6 +43,7 @@
             android:layout_rowWeight="1"
             android:layout_columnWeight="1"
             android:layout_margin="5dp"
+            android:clickable="true"
             app:cardCornerRadius="15dp"
             app:cardElevation="5dp">
 
@@ -51,17 +52,19 @@
                 android:layout_height="323dp">
 
                 <ImageView
-                    android:layout_width="144dp"
-                    android:layout_height="125dp"
+                    android:id="@+id/workoutpic"
+                    android:layout_width="136dp"
+                    android:layout_height="134dp"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="65dp"
-                    android:src="@drawable/img_1" />
+                    android:layout_marginTop="60dp"
+                    android:src="@drawable/work_out_icon" />
 
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/readingcard1"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
@@ -75,14 +78,15 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:layout_width="134dp"
-                    android:layout_height="122dp"
+                    android:layout_width="139dp"
+                    android:layout_height="128dp"
                     android:layout_centerInParent="true"
-                    android:src="@drawable/img" />
+                    android:src="@drawable/reading_icon" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/watercard1"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
@@ -96,14 +100,15 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:layout_width="145dp"
-                    android:layout_height="122dp"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
                     android:layout_centerInParent="true"
-                    android:src="@drawable/img_4" />
+                    android:src="@drawable/drink_water_icon" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/sleepcard1"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_rowWeight="1"
@@ -117,10 +122,10 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:layout_width="141dp"
-                    android:layout_height="130dp"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
                     android:layout_centerInParent="true"
-                    android:src="@drawable/img_3" />
+                    android:src="@drawable/sleeping_icon" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
     </GridLayout>

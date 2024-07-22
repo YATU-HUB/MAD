@@ -6,6 +6,8 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.fragment.app.Fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+
+import android.content.Intent;
 import android.view.MenuItem;
 import androidx.annotation.NonNull;
 
@@ -19,6 +21,7 @@ public class homepage extends AppCompatActivity {
     private AddHabitFragment addhabitfragment;
     private int bottomSelectedMenu = R.id.stats;
     private int getBottomSelectedMenu = R.id.addHabit;
+    private int TheBottomSelectedMenu = R.id.home;
     private FragmentManager fragmentManager = getSupportFragmentManager();
 
 
@@ -51,8 +54,13 @@ public class homepage extends AppCompatActivity {
                     replaceFragment(new HomeFragment());
                     return true;
                 } else if (id == R.id.addHabit) {
-                    fragmentManager.beginTransaction();
-                            replaceFragment(new AddHabitFragment());
+
+                    Intent intent = new Intent(homepage.this, AddHabit.class);
+                    startActivity(intent);
+
+                   // fragmentManager.beginTransaction();
+                           // replaceFragment(new AddHabitFragment());
+
                     return true;
                     } else if (id == R.id.stats) {
                     fragmentManager.beginTransaction();
