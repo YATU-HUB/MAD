@@ -15,10 +15,8 @@ import android.os.Bundle;
 
 public class homepage extends AppCompatActivity {
     private BottomNavigationView navView;
-    private StatsFragment statsfragment;
 
     private HomeFragment homefragment;
-    private AddHabitFragment addhabitfragment;
     private int bottomSelectedMenu = R.id.stats;
     private int getBottomSelectedMenu = R.id.addHabit;
     private int TheBottomSelectedMenu = R.id.home;
@@ -34,8 +32,6 @@ public class homepage extends AppCompatActivity {
         navView = findViewById(R.id.bottomNavigationView);
         navView.setOnItemSelectedListener(menuSelected);
         homefragment = new HomeFragment();
-        statsfragment = new StatsFragment();
-        addhabitfragment = new AddHabitFragment();
 
         }
         /*@Override
@@ -63,8 +59,8 @@ public class homepage extends AppCompatActivity {
 
                     return true;
                     } else if (id == R.id.stats) {
-                    fragmentManager.beginTransaction();
-                    replaceFragment(new StatsFragment());
+                    Intent i = new Intent(homepage.this, Stats.class);
+                    startActivity(i);
                     return true;
                 }
                 return false;
