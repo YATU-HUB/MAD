@@ -1,5 +1,6 @@
 package com.sp.habithub;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -11,9 +12,13 @@ import android.content.pm.PackageManager;
 import android.media.Image;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
 
 public class Stats extends AppCompatActivity {
@@ -32,10 +37,16 @@ public class Stats extends AppCompatActivity {
         }
     }
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_stats);
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        //navView.setOnItemSelectedListener(menuSelected);
+        bottomNavigationView.setSelectedItemId(R.id.stats);
 
         btnpicture = findViewById(R.id.btncamera_id);
         profilepic = findViewById(R.id.mypic);
@@ -49,6 +60,29 @@ public class Stats extends AppCompatActivity {
 
             }
 
+        });
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int id = item.getItemId();
+                if (id == R.id.home) {
+                    startActivity(new Intent(getApplicationContext(), homepage.class));
+                    overridePendingTransition(0,0);
+                    return true;
+                    //Intent intent = new Intent(homepage.this, homepage.class);
+                    //startActivity(intent);
+                } else if (id == R.id.addHabit) {
+                    startActivity(new Intent(getApplicationContext(), AddHabit.class));
+                    overridePendingTransition(0,0);
+                    //Intent intent = new Intent(homepage.this, AddHabit.class);
+                    //startActivity(intent);
+                    return true;
+                } else if (id == R.id.stats) {
+                    return true;
+                }
+                return false;
+            }
         });
     }
 

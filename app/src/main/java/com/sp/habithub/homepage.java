@@ -16,24 +16,45 @@ import android.os.Bundle;
 public class homepage extends AppCompatActivity {
     private BottomNavigationView navView;
 
-    private HomeFragment homefragment;
     private int bottomSelectedMenu = R.id.stats;
     private int getBottomSelectedMenu = R.id.addHabit;
     private int TheBottomSelectedMenu = R.id.home;
-    private FragmentManager fragmentManager = getSupportFragmentManager();
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage);
-        replaceFragment(new AddHabitFragment());
 
-        navView = findViewById(R.id.bottomNavigationView);
-        navView.setOnItemSelectedListener(menuSelected);
-        homefragment = new HomeFragment();
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavigationView);
+        //navView.setOnItemSelectedListener(menuSelected);
+        bottomNavigationView.setSelectedItemId(R.id.home);
 
-        }
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int id = item.getItemId();
+                if (id == R.id.home) {
+                    return true;
+                    //Intent intent = new Intent(homepage.this, homepage.class);
+                    //startActivity(intent);
+                } else if (id == R.id.addHabit) {
+                    startActivity(new Intent(getApplicationContext(), AddHabit.class));
+                    overridePendingTransition(0,0);
+                    //Intent intent = new Intent(homepage.this, AddHabit.class);
+                    //startActivity(intent);
+                    return true;
+                } else if (id == R.id.stats) {
+                    startActivity(new Intent(getApplicationContext(), Stats.class));
+                    overridePendingTransition(0,0);
+                    return true;
+                }
+                return false;
+            }
+        });
+
+
+    }
         /*@Override
                 protected void onStart() {
             invalidateOptionsMenu();
@@ -41,38 +62,5 @@ public class homepage extends AppCompatActivity {
         } */
 
 
-        NavigationBarView.OnItemSelectedListener menuSelected = new NavigationBarView.OnItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected( MenuItem item) {
-                int id = item.getItemId();
-                if (id == R.id.home) {
-                    fragmentManager.beginTransaction();
-                    replaceFragment(new HomeFragment());
-                    return true;
-                } else if (id == R.id.addHabit) {
 
-                    Intent intent = new Intent(homepage.this, AddHabit.class);
-                    startActivity(intent);
-
-                   // fragmentManager.beginTransaction();
-                           // replaceFragment(new AddHabitFragment());
-
-                    return true;
-                    } else if (id == R.id.stats) {
-                    Intent i = new Intent(homepage.this, Stats.class);
-                    startActivity(i);
-                    return true;
-                }
-                return false;
-            }
-        };
-
-
-public void replaceFragment(Fragment fragment){
-    FragmentManager fragmentManager = getSupportFragmentManager();
-    FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-    fragmentTransaction.replace(R.id.frame_layout,fragment);
-    fragmentTransaction.commit();
-
-    }
 }
